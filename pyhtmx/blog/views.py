@@ -1,5 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
+
+from .forms import ContactForm
 
 from .models import Blog
 
@@ -18,7 +19,7 @@ def index(request):
     return render_htmx(request, "index.html")
 
 def about(request):
-    return render_htmx(request, "about.html")
+    return render_htmx(request, "about.html", {"form": ContactForm()})
 
 # Create your views here.
 def blogs(request):
@@ -28,3 +29,13 @@ def blogs(request):
 def detail(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     return render_htmx(request, "detail.html", {"blog": blog})
+
+def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return render(request, "success.html")
+    else:
+        return render(request, "contact.html", {"form": ContactForm()})
+

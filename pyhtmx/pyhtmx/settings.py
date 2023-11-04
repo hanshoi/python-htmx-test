@@ -25,13 +25,15 @@ SECRET_KEY = "django-insecure-f$-hkktx@=m0nipa+y_kk_1j)sne)6@jp59cvbim@1ki(%i_r+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "blog.apps.BlogConfig",
+    "crispy_forms",
+    "crispy_tailwind",
     "django_htmx",
     "django_tailwind_cli",
     "django.contrib.admin",
@@ -114,6 +116,9 @@ TIME_ZONE = "EET"
 USE_I18N = True
 
 USE_TZ = True
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 
 # Static files (CSS, JavaScript, Images)

@@ -20,3 +20,8 @@ class Tag(models.Model):
 
     def __str__(self) -> str:
         return self.code
+
+class Contact(models.Model):
+    name = models.CharField(max_length=128)
+    email = models.CharField(max_length=128)
+    message = models.CharField(max_length=1080)
