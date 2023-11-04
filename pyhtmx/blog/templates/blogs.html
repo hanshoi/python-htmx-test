@@ -1,11 +1,11 @@
-{% if blogs %}
+{% extends base %} {% block main %} {% if blogs %}
 <ul>
   {% for blog in blogs %}
   <li>
     <button
       hx-get="{% url 'detail' blog.id %}"
       hx-trigger="click"
-      hx-target="body"
+      hx-target="#body"
       class="text-white"
     >
       {{ blog.title }}
@@ -15,4 +15,4 @@
 </ul>
 {% else %}
 <p>No blogs are available.</p>
-{% endif %}
+{% endif %} {%endblock%}
