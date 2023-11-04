@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %} {% if blogs %}
+<ul>
+  {% for blog in blogs %}
+  <li>
+    <a href="{% url 'detail' blog.id %}" class="text-white">{{ blog.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No blogs are available.</p>
+{% endif %} {% endblock %}
