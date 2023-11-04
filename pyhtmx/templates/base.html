@@ -1,4 +1,12 @@
 {% load static %} 
-<link rel="stylesheet" href={% static 'style.css' %}>
-<script src="{% static 'htmx.min.js' %}" defer></script>
-{% block content %}{% endblock %}
+{% load tailwind_cli %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="{% static 'htmx.min.js' %}" defer></script>
+    {% tailwind_css %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>

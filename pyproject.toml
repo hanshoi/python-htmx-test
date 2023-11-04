@@ -10,6 +10,7 @@ packages = [{ include = "python_htmx" }]
 python = "^3.11"
 Django = "^4.2.7"
 django-htmx = "^1.17.0"
+django-tailwind-cli = "^2.6.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.6.1"
