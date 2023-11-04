@@ -1,11 +1,18 @@
-{% extends "base.html" %} {% block content %} {% if blogs %}
+{% if blogs %}
 <ul>
   {% for blog in blogs %}
   <li>
-    <a href="{% url 'detail' blog.id %}" class="text-white">{{ blog.title }}</a>
+    <button
+      hx-get="{% url 'detail' blog.id %}"
+      hx-trigger="click"
+      hx-target="body"
+      class="text-white"
+    >
+      {{ blog.title }}
+    </button>
   </li>
   {% endfor %}
 </ul>
 {% else %}
 <p>No blogs are available.</p>
-{% endif %} {% endblock %}
+{% endif %}

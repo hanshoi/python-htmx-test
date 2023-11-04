@@ -856,6 +856,10 @@ select {
   max-width: 42rem;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .content-start {
   align-content: flex-start;
 }

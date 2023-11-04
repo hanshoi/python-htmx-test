@@ -4,20 +4,29 @@
     class="mx-auto flex max-w-7xl justify-center p-6 lg:px-8 lg:gap-x-12"
     aria-label="Global"
   >
-    <a
-      href="{% url 'home' %}"
+    <button
+      hx-get="{% url 'home' %}"
+      hx-trigger="click"
+      hx-target="#body"
       class="text-sm font-semibold leading-6 text-white"
-      >Home</a
     >
-    <a
-      href="{% url 'blogs' %}"
+      Home
+    </button>
+    <button
+      hx-get="{% url 'blogs' %}"
+      hx-trigger="click"
+      hx-target="#body"
       class="text-sm font-semibold leading-6 text-white"
-      >Blog</a
     >
-    <a
-      href="{% url 'about' %}"
+      Blog
+    </button>
+    <button
+      hx-get="{% url 'about' %}"
+      hx-trigger="click"
+      hx-target="#body"
       class="text-sm font-semibold leading-6 text-white"
-      >About</a
     >
+      About
+    </button>
   </nav>
 </header>
