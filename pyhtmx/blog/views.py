@@ -19,7 +19,7 @@ def index(request):
     return render_htmx(request, "index.html")
 
 def about(request):
-    return render_htmx(request, "about.html", {"form": ContactForm()})
+    return render_htmx(request, "about.html")
 
 # Create your views here.
 def blogs(request):
