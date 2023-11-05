@@ -149,6 +149,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-browser-reload"
+version = "1.12.0"
+description = "Automatically reload your browser in development."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "django-crispy-forms"
 version = "2.1"
 description = "Best way to have Django DRY forms"
@@ -357,7 +368,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "a11d32e9515361a95b89ba9451dc3cd65ccd3b224ccca8e08143c8f06fca3a21"
+content-hash = "794a06fb62008bf1fd09fc2a5087e13f435cafc46300a4cce8d4c90e8a71443c"
 
 [metadata.files]
 aiohttp = [
@@ -596,6 +607,10 @@ crispy-tailwind = [
 Django = [
     {file = "Django-4.2.7-py3-none-any.whl", hash = "sha256:e1d37c51ad26186de355cbcec16613ebdabfa9689bbade9c538835205a8abbe9"},
     {file = "Django-4.2.7.tar.gz", hash = "sha256:8e0f1c2c2786b5c0e39fe1afce24c926040fad47c8ea8ad30aaf1188df29fc41"},
+]
+django-browser-reload = [
+    {file = "django_browser_reload-1.12.0-py3-none-any.whl", hash = "sha256:6c10b4b59a5aa7a412284d7c909fb5b80199e98a488f5b24da5c49b090d1ef3f"},
+    {file = "django_browser_reload-1.12.0.tar.gz", hash = "sha256:2dc98c752b55d22db9c11fbc0274c16160ce4dcd67ef0ef294135ab57d711435"},
 ]
 django-crispy-forms = [
     {file = "django-crispy-forms-2.1.tar.gz", hash = "sha256:4d7ec431933ad4d4b5c5a6de4a584d24613c347db9ac168723c9aaf63af4bb96"},
