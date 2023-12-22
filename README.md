@@ -1,2 +1,2 @@
-# python-htmx-test
-Just testing around with this new technology
+# Quteo
+Quteo tool for internal use.

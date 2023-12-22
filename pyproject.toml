@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "python-htmx"
+name = "quteo"
 version = "0.1.0"
-description = "Just testing HTMX with Python"
-authors = ["hanshoi"]
+description = "quteo"
+authors = ["Antti Kaarnikka"]
 readme = "README.md"
-packages = [{ include = "python_htmx" }]
+packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
